@@ -1,0 +1,400 @@
+body
+ {
+    background-image: url(https://media.istockphoto.com/id/1465053603/photo/an-original-background-image-for-design-or-product-presentation-with-a-play-of-light-and.webp?b=1&s=170667a&w=0&k=20&c=bQlqz7KwSTMFgm4-x4RwJ6AiWEgueDi7Eukk-W8c9Po=);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+ }
+ 
+ ul
+ {
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+    float: right;
+    font-size: 21px;
+    margin-right: 1%;
+ }
+
+ li
+ {
+    display: inline;
+ }
+
+ li a
+ {
+    color: #8C6645;
+    text-decoration: none;
+    padding: 14px 16px;
+ }
+
+li a:hover:not(:active)
+{
+    background-color: #D4B99D;
+}
+ 
+.active
+{
+   background-color: #BAA38A;
+}
+
+hr
+{
+   border: 1px solid #734F2F;
+}
+
+h3
+{
+   text-align: center;
+   color: #F2E1C2;
+}
+
+footer 
+{
+   background-color: #734F2F;
+   padding: 10px;
+   text-align: center;
+}
+
+footer img
+{  
+   display: inline-block; /* Display the images horizontally */
+   margin: 5px 10px 0px 10px; /* Add some space between the images */
+   margin-bottom: 0;
+   height: 70px; /* Set the height as a percentage of the container's height */
+   width: auto; /* Maintain the aspect ratio */
+}
+
+footer img:hover
+{
+   background-color: #8C5535;
+}
+
+.Dropdown
+{
+   display: inline-block;
+}
+
+.Dropdown a
+{
+   text-decoration: none;
+   display: block;
+   color: #8C6645;
+   padding: 14px 16px;
+   font-size: 21px;
+}
+
+.Dropdown .Content
+{
+   display: none;
+   position: absolute;  
+   min-width: 100px;
+   box-shadow: 2px 2px 3px #8C5535;
+}
+
+.Dropdown:hover .Content
+{
+   display: block;
+}
+
+.Dropdown:hover a
+{
+  background-color:#D4B99D;
+}
+
+.Dropdown .Content a:hover
+{
+  background-color: #BAA38A;
+}
+
+/* --- ABOUT ME SECTION STYLES --- */
+
+.about-me-section {
+    display: flex;
+    /* ADD THIS LINE TO SWAP THE ORDER: */
+    flex-direction: row-reverse; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    padding: 80px 10%; 
+    position: relative; 
+    overflow: hidden; 
+}
+/* ---------------------------------- */
+/* A. Recreating the Decorative Shapes */
+/* ---------------------------------- */
+
+
+.about-me-section::after {
+    content: "";
+    position: absolute;
+    /* Adjust size to be slightly larger than the profile-photo (e.g., 350px) */
+    width: 350px; 
+    height: 350px;
+    background-color: #734F2F; /* Matching your brown scheme */
+    
+    /* Position CRITICAL for centering behind the image on the left */
+    left: 5%; /* Position from the left edge */
+    top: 50%;
+    transform: translateY(-50%) translateX(0%); 
+
+    /* Make it a full circle */
+    border-radius: 50%; 
+    z-index: 0; 
+}
+
+/* ---------------------------------- */
+/* B. Content Layout and Typography   */
+/* ---------------------------------- */
+
+.about-content {
+    flex: 1; 
+    max-width: 600px;
+    /* CHANGE THIS: */
+    padding-right: 0; 
+    padding-left: 40px; 
+    z-index: 1; 
+}
+
+.about-visuals {
+    max-width: 300px; 
+    flex-shrink: 0; /* Prevents the visuals from shrinking */
+    z-index: 1;
+}
+
+.about-title {
+    /* Styles to match the 'ABOUT ME' text design */
+    font-family: Georgia, serif; 
+    font-style: italic;
+    font-size: 2.5em;
+    /* CHANGE THIS LINE: */
+    color: #734F2F; /* Matching the <hr> and decorative shape color */
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.about-content p {
+    /* CHANGE THIS LINE: */
+    color: #734F2F; /* Matching the new scheme */
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.profile-photo {
+    /* Style for your actual photo */
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 50%; /* Makes the image a perfect circle */
+    /* CHANGE 1: Use a darker border (e.g., #402F21) to match the dark edge in the reference */
+    border: 5px solid #402F21; 
+    /* CHANGE 2: Reduce/remove the box shadow, as it's not present in the reference */
+    box-shadow: none; 
+}
+
+/* ---------------------------------- */
+/* C. Responsiveness (Stacks on Mobile)*/
+/* ---------------------------------- */
+
+@media (max-width: 900px) {
+    /* ... other existing media query rules ... */
+
+    /* Adjust the decorative circle size and position for stacked view */
+    .about-me-section::after {
+        left: 50%; /* Center horizontally */
+        transform: translateY(-50%) translateX(-50%); /* Center using transform */
+        width: 280px; 
+        height: 280px;
+    }
+
+    .about-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+        order: 2; /* Put the text after the image on mobile */
+    }
+
+    .about-visuals {
+    max-width: 300px; /* Set max width for the profile picture itself (e.g., 300px) */
+    flex-shrink: 0; 
+    z-index: 1;
+}
+
+    /* Adjust the decorative shapes for the stacked view */
+    .about-me-section::after {
+        right: -80px; 
+        width: 300px; 
+        height: 300px;
+    }
+}
+
+/* --- NEW CONTACT/ABOUT PAGE LAYOUT (Inspired by Template Image) --- */
+
+/* Top Section Styling (Contact Form Area - White/Light Gray) */
+.contact-form-area {
+    text-align: center;
+    padding: 80px 5%;
+    
+}
+
+.contact-header {
+    font-size: 3em;
+    color: #402F21; /* Darker brown for contrast */
+    margin-bottom: 10px;
+}
+
+.contact-prompt {
+    font-size: 1.2em;
+    color: #734F2F;
+    margin-bottom: 50px;
+}
+
+.email-display {
+    /* Simple styling for the displayed email address */
+    color: #402F21;
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+
+/* Bottom Section Styling (Info Grid - Brown/Beige Background) */
+.info-grid-area {
+    background-color:#F2E2C4; /* Light beige/brown background for the bottom area */
+    padding: 60px 5%;
+}
+
+.info-grid-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.info-column {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    padding: 20px;
+    margin: 15px;
+}
+
+.grid-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff; /* Primary brown color for the icon background */
+    border-radius: 50%;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.grid-title {
+    font-size: 1.4em;
+    color: #402F21; /* Dark brown heading */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.grid-content-text {
+    color: #734F2F;
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .info-grid-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-column {
+        min-width: 90%;
+        margin-bottom: 30px;
+    }
+}
+
+/* Rules for screen sizes 768px and smaller (Tablets and Phones) */
+@media screen and (max-width: 768px) {
+    /* 1. Reset Main Navigation to Stack Vertically */
+    ul {
+        float: none; /* Remove float for full width */
+        text-align: center;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    li {
+        display: block; /* Make links full-width blocks */
+        text-align: center;
+    }
+    
+    /* 2. Fix the Dropdown to work in a stacked layout */
+    .Dropdown {
+        display: block;
+    }
+    .Dropdown .Content {
+        position: static; /* Remove absolute positioning */
+        box-shadow: none;
+        min-width: 100%;
+        text-align: center;
+    }
+    
+    /* 3. Re-format the main home page content layout */
+    .myPic {
+        float: none !important; /* CRITICAL: Override inline/external styles */
+        margin: 20px auto !important; /* Center the image */
+        width: 80% !important; /* Make image wider on small screens */
+        height: auto !important; /* CRITICAL: Remove fixed height */
+    }
+
+    h2 {
+        margin: 0 5% !important; /* Give full width back to the text */
+        text-align: left !important;
+    }
+    
+    /* 4. Fix Contacts Page Grid for stacking */
+    .info-grid-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-column {
+        min-width: 90%;
+        margin-bottom: 30px;
+    }
+}
+
+/* Rules for screen sizes 600px and smaller (Phones) */
+@media screen and (max-width: 600px) {
+    
+    /* 1. Make Skills Grid 1 column wide */
+    .skill-grid-container {
+        gap: 20px;
+    }
+    .skill-item {
+        flex-basis: 100%; /* Make each skill item take up full width */
+        max-width: 100%;
+    }
+
+    /* 2. Make Gallery/Projects 1 column wide */
+    .gallery-container {
+        justify-content: center;
+    }
+    /* Note: Since your HTML uses <div> with class="gallery" and float: left, 
+       we must specifically target and fix this outdated layout style. */
+    div.gallery {
+        float: none; /* Remove float */
+        width: 90%; /* Take up most of the screen width */
+        margin: 10px auto; /* Center it */
+    }
+    
+    /* 3. General typography adjustments */
+    h1, h2, h3 {
+        font-size: 1.5em !important;
+    }
+    p {
+        font-size: 1em;
+    }
+}

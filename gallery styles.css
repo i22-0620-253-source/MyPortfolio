@@ -1,0 +1,68 @@
+font
+{
+    font-size: 40px;
+    color: #734F2F;
+}
+
+/* In gallery styles.css, remove the float and fixed width for div.gallery */
+div.gallery 
+{
+    margin: 5px;
+    border: 1px solid #E3C6A6;
+    margin-left: 0.5%;
+    transition: transform .2s;
+    /* The layout is now entirely controlled by the .gallery-container (Flexbox) 
+       and the responsive media queries in styles.css. */
+}
+
+div.gallery img 
+{
+    width: 100%;
+    height: auto;
+}
+
+div.desc 
+{
+    padding: 15px;
+    text-align: center;
+    color: #734F2F;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.gallery-container
+{
+    padding-bottom: 10%;
+}
+
+b img
+{
+    float: left;
+    width: auto;
+    height: 100px;
+    margin-right: -10%;
+    margin-top: -1%;
+}
+
+.gallery-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery
+{
+    flex: 0 0 calc(24.7% - 20px); /* Adjust the width of each image container as needed */
+    max-width: calc(24.7% - 20px); /* Adjust the width of each image container as needed */
+    margin: 10px; /* Adjust the margin around each image container as needed */
+    border: 1px solid #E3C6A6;
+    overflow: hidden;
+}
+
+.gallery img 
+{
+    width: 100%;
+    height: auto;
+    display: block;
+}

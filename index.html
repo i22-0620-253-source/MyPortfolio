@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> My Personal Porfolio Website </title>
+
+    <meta name="viewport" content="width=device-width", initial scale="1">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        p img
+        {
+            width: 60px;
+            height: auto;
+            margin-left: 2px;
+            vertical-align: middle;
+        }
+
+        .myPic
+        {
+            float: right;
+            margin-top: 1%;
+            margin-right: 13%;
+            border: 2px outset #402F21 #402F21;
+            border-radius: 10px;
+            padding: 3px;
+            background-color: #BFA77A;
+            height: 450px;
+            width: 25%;
+        }
+
+        div img
+        {
+            border-radius: 4%;
+        }
+
+        h2
+        {
+            margin-left: 5%;
+            margin-right: 50%;
+            color: #734F2F;
+            text-align: justify;
+        }
+
+        .row 
+        {
+            display: flex; /* Display images in a row */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .column 
+        {
+            flex: 0 0 auto; /* Prevent columns from growing */
+            margin-right: 10px; /* Add space between images */
+        }
+
+        .column:last-child 
+        {
+            margin-right: 0; /* Remove margin from last image */
+        }
+
+        .column img 
+        {
+            margin-left: 5%;
+            width: 500px; /* Limit image width */
+            height: 200px; /* Maintain aspect ratio */
+        }
+
+        .column img
+        {
+            transition: transform .2s;
+        }
+
+        .column img:hover
+        {
+            transform: scale(1.05);
+            border: 1px solid black;
+        }
+
+        .button
+        {
+            background-color: #8C6849;
+            box-shadow: 5px 5px 8px 2px #D9AF8B;
+            border: 1px solid #593E25;
+            color: beige;
+            padding: 15px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .button:hover
+        {
+            background-color: #593E25 ;
+        }
+
+        p, h1
+        {
+            margin-left: 10%;
+            margin-right: 50%;
+            color: #734F2F;
+            text-align: justify;
+        }
+
+        p
+        {
+            font-size: 120%;
+            line-height: 180%;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<br>   
+    <ul>
+        <li><a class="active" href="#home"> Home </a></li>
+
+            <li class="Dropdown">
+                <a href="#Personal Info"> Portfolio </a>
+                    <div class="Content">
+                        <a href="Projects.html"> Projects </a>
+                        <a href="Skills.html"> Skills </a>
+                    </div>
+            </li>
+        <li><a href="Contacts.html"> Contacts </a></li>
+    </ul>
+
+<br><br><br>    
+<hr>
+<br><br><br><br>
+
+    <div class="myPic">
+        <img src="profile.jpg" alt="Cale Henituse" height="100%" width="100%" class="image">
+    </div>
+
+    <h1> Hello, Charlotte Dominique here!</h1>
+    <p> I am an IT student who is passionate about creating and developing 
+        websites. I specialize more in back-end development, but I can also 
+        design user inetrfaces. I am currently exploring cloud deployment to
+        create more effective and eficient systems. I am always learning new tools
+        and utilizing them to further expand my knowledge, as well as accumulate 
+        experience to deliver growth-oriented solutions for my projects. Outside of
+        tech, I am also a choreographer and a dancer.
+    </p>
+
+  
+<br><br><br><br><br><br><br><br><br><br><br>
+
+    <h2> My Recent Projects </h2>
+
+    
+
+    <div class="row">
+        <div class="column">
+            <a href="w1.png">
+                <img src="w1.png" alt="Web Page" style="width:100%">
+            </a>
+        </div>
+        <div class="column">
+            <a href="w2.png">
+                <img src="w2.png" alt="Web Page" style="width:100%">
+            </a>
+        </div>
+        <div class="column">
+            <a href="w3.png">
+                <img src="w3.png" alt="Web Page" style="width:100%">
+            </a>
+        </div>
+        <div class="column">
+            <a href="w4.png">
+                <img src="w4.png" alt="Web Page" style="width:100%">
+            </a>
+        </div>
+    </div>
+
+<br>
+
+    <center>
+        <a href="Projects.html" class="button"> See More </a>
+    </center>
+
+<br><br>
+
+    <footer>
+        <h3> Follow Me on Social Media </h3>
+        <a href="https://www.facebook.com/charlottedominique.marquez.9?mibextid=ZbWKwL">
+            <img src="facebook.png" alt="Facebook"></a>
+        <a href="https://t.me/Charlotte_Dominique">
+            <img src="telegram.png" alt="Telegram"></a>
+        <a href=https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.tumblr.com%2Fblog%2Fview%2Fsaltyhottubparadise&h=AT3z6hHrMXRCRfI-dQoeHFUZ-X3E35NIZcAOFE2HJ8sWBJkhVK90pQT2ZyQ7UZq7tAolzOw8JWD7RTqrzLDnjmW8NcTJe9jxzKpp8-UtLTNPTq8bAO11eJKU28SnNyFDDLu5BA>
+            <img src="tumblr.png" alt="Tumblr"></a>
+        <a href=https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.snapchat.com%2Fadd%2Fdokjaxcale%3Fshare_id%3DY2aybFPKHd0%26locale%3Den-GB&h=AT3z6hHrMXRCRfI-dQoeHFUZ-X3E35NIZcAOFE2HJ8sWBJkhVK90pQT2ZyQ7UZq7tAolzOw8JWD7RTqrzLDnjmW8NcTJe9jxzKpp8-UtLTNPTq8bAO11eJKU28SnNyFDDLu5BA>
+            <img src="snapchat.png" alt="Snapchat"></a>
+    </footer>
+
+</body>
+</html>
